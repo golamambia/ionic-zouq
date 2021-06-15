@@ -1,0 +1,66 @@
+<!-- <ion-header>
+  <ion-toolbar>
+  	<button class="btn-back"> <i class="zmdi zmdi-arrow-left"></i> </button>
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="wrapper">
+    <div class="loginarea">
+       <div class="login_top">
+         <div class="container">
+          <!-- <button class="edit"><img src="assets/edit.png" alt=""></button> -->
+           <button class="btn-back" (click)="back()"> <i class="zmdi zmdi-arrow-left"></i> </button>
+         </div>
+       </div>
+       <div class="login_formbox">
+         <div class="container">
+           <div class="loginform">
+                <div class="edit_imgarea">
+                   <div class="editimg">
+                     <img src="assets/img-4.jpg" alt=""> 
+                     <!--  <img *ngIf="userData?.profile_pic" src="{{userData?.pic_url}}{{userData?.profile_pic}}"> -->
+                     <button><i class="fas fa-camera"></i></button>
+                   </div>
+                   <h2 *ngIf="htmlYouWantToAdd" [innerHTML]="htmlYouWantToAdd">{{userData?.name}}</h2>
+                   <h2 *ngIf="!htmlYouWantToAdd" >{{userData?.name}}</h2>
+                </div>
+                <form>
+                    <div class="form-group">
+                      <div class="icon"><img src="assets/editprofileicon1.png"  alt=""></div>
+                      <input type="text" class="form-control"  placeholder="Name"  [(ngModel)]="name" [ngModelOptions]="{standalone:true}" value="{{userData?.name}}">
+                    </div>
+                    
+                    <div class="form-group">
+                      <div class="icon"><img src="assets/editprofileicon3.png"  alt=""></div>
+                      <input type="text" class="form-control"  placeholder="Phone"  [(ngModel)]="phone" [ngModelOptions]="{standalone:true}" value="{{userData?.phone}}" >
+                    </div>
+                    <div class="form-group">
+                      <div class="icon"><img src="assets/editprofileicon4.png"  alt=""></div>
+                      <input type="text" class="form-control"  placeholder="Email" value="{{userData?.email}}" readonly="">
+                    </div>
+                    <!-- <div class="form-group">
+                      <div class="icon"><img src="assets/editprofileicon5.png"  alt=""></div>
+                      <input type="password" class="form-control" placeholder="......." >
+                     
+                    </div> -->
+                   
+                   
+                   <button class="signin" (click)="updateProfile()">save changes</button>
+                   
+                </form>
+           </div>
+         </div>
+       </div>
+     </div>
+     <!-- <div class="sticky_footer">
+       <div class="container">
+         <p><button class="active" routerLink="/"><i class="zmdi zmdi-home"></i><span></span></button></p>
+         <p><button routerLink="/"><i class="fa fa-search" aria-hidden="true"></i><span></span></button></p>
+         <p><button routerLink="/cart-page"><i class="zmdi zmdi-shopping-cart"></i><span></span> <small [innerHTML]="cartcount"></small></button></p>
+         <p><button routerLink="/sidebar"><i class="zmdi zmdi-account"></i><span></span></button></p>
+       </div>
+     </div> -->
+  </div>
+</ion-content>

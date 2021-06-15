@@ -1,0 +1,52 @@
+<!-- <ion-app>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>
+ -->
+ <ion-app>
+	<!-- <ion-menu side="start" menuId="first" contentId="main" (ionWillOpen)="menuOpened1()">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Start Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+  	<h2 *ngIf="userDetails">{{userDetails.user.name}}</h2>
+    <ion-list>
+    	 <ion-item routerLink="/" (click)="menuClose()">Home</ion-item>
+      <ion-item *ngIf="!userDetails" routerLink="/register" (click)="menuClose()">Registration </ion-item>
+      <ion-item *ngIf="!userDetails" routerLink="/login" (click)="menuClose()">Login</ion-item>
+     
+      
+      <ion-item *ngIf="userDetails" (click)="logout()">Logout</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu> -->
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+ <!--  <ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button  routerLink="/" (click)="menuClose()">
+     <i class="fa fa-home" aria-hidden="true"></i>
+      <ion-label></ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button >
+      <i class="fa fa-search" aria-hidden="true"></i>
+      
+      <ion-label></ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button routerLink="/cart-page">
+      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+      
+      <ion-label></ion-label>
+    </ion-tab-button>
+    <ion-tab-button  routerLink="/sidebar">
+      <i class="fa fa-user" aria-hidden="true"></i>
+      <ion-label></ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs> -->
+</ion-app>

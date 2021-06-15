@@ -1,0 +1,123 @@
+<ion-content>
+
+   
+    
+    <div class="header">
+      <div class="top-nav">
+        <button class="btn-back" (click)="back()">
+          <i class="zmdi zmdi-arrow-left"></i>
+        </button>
+        <div class="title">Voucher checkout</div>
+      </div>
+    </div>
+    
+     
+      
+      
+    <div class="dtlCheckout">
+      <div class="container">
+        <h3>Order Summery</h3>
+        <div class="billings">
+          <ul class="billDtl">
+            <li *ngFor="let voucherlist of cartdata ; let i=index">
+             <span class="itemTitle">€{{voucherlist.price}}</span>
+              <span class="itemTitle">Qty {{voucherlist.qty}}X{{voucherlist.price}}</span>
+              <span class="itemRate">€{{voucherlist.price*voucherlist.qty}}</span>
+            </li>
+            
+            <li class="amountTotal">
+              <span class="itemTitle">To Pay</span>
+              <span class="itemRate">€{{voucherTprice.toFixed(2)}}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="delevary_time_area">
+      <div class="container">
+        <div class="delevary_time_body">
+          <h3>Credit/Debit Cards</h3>
+          <div class="delivery_box">
+            
+            <div class="delivery">
+              
+              <div class="form-group">
+              	<label class="radio-inline">
+                 Name on Card
+                </label>
+                <input type="text" class="form-control" [(ngModel)]="name" [ngModelOptions]="{standalone:true}" placeholder="Name">
+              </div>
+            </div>
+
+            
+            <div class="delivery">
+              
+              <div class="form-group">
+              	<label class="radio-inline">
+                 Card Number
+                </label>
+                <input type="text" class="form-control" [(ngModel)]="cardNumber" [ngModelOptions]="{standalone:true}" placeholder="Number">
+              </div>
+            </div>
+
+             
+            <div class="delivery">
+              
+              <div class="form-group">
+              	<label class="radio-inline">
+                Expiration Month
+                </label>
+                <input type="text" class="form-control" [(ngModel)]="expiryMonth" [ngModelOptions]="{standalone:true}" placeholder="MM">
+              </div>
+            </div>
+
+
+             
+            <div class="delivery">
+              
+              <div class="form-group">
+              	<label class="radio-inline">
+                 Expiration Year
+                </label>
+                <input type="text" class="form-control" [(ngModel)]="expiryYear" [ngModelOptions]="{standalone:true}" placeholder="YYYY">
+              </div>
+            </div>
+
+             
+            <div class="delivery">
+              
+              <div class="form-group">
+              	<label class="radio-inline">
+                 CVC
+                </label>
+                <input type="text" class="form-control" [(ngModel)]="cvc" [ngModelOptions]="{standalone:true}" placeholder="Ex. 123">
+              </div>
+            </div>
+
+
+          </div>
+
+
+
+
+          
+        </div>
+      </div>
+    </div>
+    
+      
+      
+<div class="bottom-actionWrapper">
+        <div class="btn-action">
+          <span class="total">Total: €{{voucherTprice.toFixed(2)}}</span>
+          <button class="btn-default" (click)="voucherPay()">PROCEED <i class="fas fa-long-arrow-alt-right"></i></button>
+        </div>
+        
+      </div>
+      
+   
+
+    
+  
+</ion-content>

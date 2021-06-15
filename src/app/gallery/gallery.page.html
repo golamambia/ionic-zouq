@@ -1,0 +1,28 @@
+<ion-content>
+    
+  <div class="header">
+    <div class="top-nav">
+      <button class="btn-back" (click)="back()">
+        <i class="zmdi zmdi-arrow-left"></i>
+      </button>
+      <div class="title">Our Gallery</div>
+    </div>
+  </div>
+      
+  <div class="our_gallery_main_area">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-6" *ngFor="let datalist of gallery_list">
+          <div class="our_gallery_box">
+            <img src="{{datalist.img_url+datalist.sl_image}}" alt="" title="{{datalist.sl_name}}">
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+    
+  
+</ion-content>

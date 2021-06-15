@@ -1,0 +1,47 @@
+
+
+<ion-content>
+
+   
+    
+    <div class="header">
+      <div class="top-nav">
+        <button class="btn-back" (click)="back()">
+          <i class="zmdi zmdi-arrow-left"></i>
+        </button>
+        <div class="title">Address List</div>
+        <button class="btn-add-address" (click)="gotoAddAddress()">
+          <i class="far fa-plus-square"></i>
+        </button>
+      </div>
+    </div>
+    
+    <div class="delevary_address">
+      <div class="container" *ngFor="let data of address_list">
+        
+
+        <div class="add_address_box">
+          <p>{{data.usa_address}}<br/> {{data.usa_doorno}}<br/> {{data.usa_landmark}}</p>
+          <button class="btn-edit" (click)="edit(data.usa_id)"><i class="fas fa-pen"></i></button>
+          <button class="btn-delete" (click)="delete(data.usa_id)"><i class="fas fa-trash-alt"></i></button>
+        </div>
+        
+        
+
+      </div>
+    </div>
+    
+      <div class="sticky_footer">
+       <div class="container">
+         <p><button  routerLink="/"><i class="zmdi zmdi-home"></i><span></span></button></p>
+         <p><button routerLink="/restaurant-menu"><i class="zmdi zmdi-search"></i><span></span></button></p>
+         <p><button routerLink="/cart-page"><i class="zmdi zmdi-shopping-cart"></i><span></span> <small [innerHTML]="cartcount"></small></button></p>
+         <p><button routerLink="/sidebar"><i class="zmdi zmdi-account"></i><span></span></button></p>
+       </div>
+     </div>
+    
+   
+
+    
+  
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "testToday",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

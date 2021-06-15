@@ -1,0 +1,60 @@
+
+
+<ion-content>
+
+   
+    
+  <div class="header">
+    <div class="top-nav">
+      <button class="btn-back" (click)="back()">
+        <i class="zmdi zmdi-arrow-left"></i>
+      </button>
+      <div class="title">Contact Us</div>
+    </div>
+  </div>
+      
+  <div class="contact_us_area">
+    <div class="container">
+      
+      <div class="contact_us_body">
+        <h1>Our Address</h1>
+        <div class="contact_address_box">
+          <div class="icon_box"><i class="zmdi zmdi-pin"></i></div>
+          <h3>address</h3>
+          <p>817 N California Ave, Chicago, IL 60622</p>
+        </div>
+        <div class="contact_address_box">
+          <div class="icon_box"><i class="zmdi zmdi-phone"></i></div>
+          <h3>call</h3>
+          <p>+1 (234) 555 - 67 - 89</p>
+        </div>
+        <div class="contact_address_box">
+          <div class="icon_box"><i class="zmdi zmdi-email"></i></div>
+          <h3>email</h3>
+          <p>info@zouq.com</p>
+        </div>
+      </div>
+
+      <div class="contact_us_body">
+        <h2>Please Contact Us</h2>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Name *" [(ngModel)]="ct_name" [ngModelOptions]="{standalone:true}">
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Email *" [(ngModel)]="ct_email" [ngModelOptions]="{standalone:true}">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Phone No. *" [(ngModel)]="ct_phone" [ngModelOptions]="{standalone:true}">
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" placeholder="Messages *" [(ngModel)]="ct_subject" [ngModelOptions]="{standalone:true}"></textarea>
+        </div>
+        <button class="btn" (click)="save()">submit</button>
+      </div>
+
+    </div>
+  </div>
+
+    
+  
+</ion-content>

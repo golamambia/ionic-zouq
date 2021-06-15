@@ -1,0 +1,91 @@
+
+<ion-content>
+<ion-refresher (ionRefresh)="doRefresh($event)" slot="fixed" pullFactor="0.5" pullMin="100" pullMax="200">
+    <ion-refresher-content style="margin-top: 150px;"></ion-refresher-content>
+  </ion-refresher>
+    <div class="full-screen cart">
+    
+    <div class="header">
+      <div class="top-nav">
+        <button class="btn-back" (click)="back()">
+          <i class="zmdi zmdi-arrow-left"></i>
+        </button>
+        <div class="title">TAKE AWAY ORDER</div>
+      </div>
+      <div class="search_area">
+          <div class="form-group">            
+            <input (keyup)="listing($event)" [(ngModel)]="search_key" [ngModelOptions]="{standalone:true}" type="text" class="form-control" placeholder="Find menu">
+            <button><i class="zmdi zmdi-search"></i></button>
+          </div>
+        </div>
+    </div>
+    
+    
+    <div class="listingarea">
+      <div class="container" *ngIf="dataMenu && loader_val == false">
+
+         <div class="listing_box listCard" *ngFor="let menulist of dataMenu ; let i=index">
+           <button class="thumble"><img src="https://digiworld.ie/project/zouq/uploads/menuImages/{{menulist.menu_image}}"  alt=""></button>
+           
+<div class="price" *ngIf="menulist.quantity>0" >
+              <div class="number">
+                <input type="text" readonly class="form-control" value="{{menulist.quantity}}">
+                <button class="btn-minus" (click)="decrementQty(i,menulist.menu_id,menulist)"><i class="zmdi zmdi-minus"></i></button>
+                <button class="btn-plus" (click)="incrementQty(i,menulist.menu_id,menulist)"><i class="zmdi zmdi-plus"></i></button>
+              </div>
+              
+            </div>
+            
+           <button class="add-to-cart" (click)="addToCart(i,menulist.menu_id,menulist)" *ngIf="menulist.quantity==0">Add +</button> 
+            
+           <div class="listing_textbox">
+             <h3><button>{{menulist.menu_name}}</button></h3>
+             <h6>Price: <i class="fas fa-euro-sign"></i> {{menulist.menu_price}}/-</h6>
+             <div class="retingbox">
+               <p>{{menulist.description}}</p>
+             </div>
+           </div>
+         </div>
+
+         
+
+</div>
+
+<div class="container" *ngIf="loader_val">
+  
+           <div class="loader_box">
+<img src="assets/loader.gif">
+</div>
+
+</div>
+
+<div class="container" *ngIf="menu_list && menu_list.length==0 && loader_val == false">
+ <div class="empty_menu">
+           Not available
+         </div>
+  </div>
+
+
+
+
+     </div>
+      
+      
+<div class="sticky_footer">
+       <div class="container">
+         <p><button routerLink="/"><i class="zmdi zmdi-home"></i><span></span></button></p>
+         <p><button class="active"  routerLink="/restaurant-menu"><i class="zmdi zmdi-search"></i><span></span></button></p>
+         <p><button routerLink="/cart-page"><i class="zmdi zmdi-shopping-cart"></i><span></span> <small [innerHTML]="cartcount"></small></button></p>
+         <p><button routerLink="/sidebar"><i class="zmdi zmdi-account"></i><span></span></button></p>
+       </div>
+     </div>
+    
+    </div>
+
+    
+    <ion-infinite-scroll #infiniteScroll (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  
+</ion-content>

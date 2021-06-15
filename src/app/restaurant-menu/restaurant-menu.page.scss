@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css');
+
+html, body {
+    display: block;
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+	position:relative;
+	z-index:1;
+	background-color: #ffffff;
+
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.full-screen {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.bottom-actionWrapper .btn-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6%;
+    padding: 0 1em;
+}
+
+.full-screen .top-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #000;
+}
+.full-screen .top-nav .btn-back {
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+}
+.full-screen .top-nav .btn-close {
+    font-size: 2em;
+    color: #8a98ba;
+}
+.full-screen .top-nav .title {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 auto;
+    text-transform: uppercase;
+    letter-spacing: normal;
+}
+.full-screen .topBg-pattern {
+    position: relative;
+    z-index: -1;
+}
+.full-screen .topBg-pattern:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 18em;
+    width: 100%;
+    background-color: #fbaf03;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+/* End --GLOBAL-- */
+
+.header {
+    background-color: #000;
+    box-shadow: 0px 2px 5px rgb(0 0 0 / 24%);
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+.search_area {
+    margin-top: 0;
+    background-color: #000;
+    box-sizing: border-box;
+    padding: 0 1em 1em;
+}
+.form-group {
+    position: relative;
+}
+.form-group i {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: 12px;
+    font-size: 25px;
+    color: #ff0000;
+    font-weight: 300;
+}
+.form-control {
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box;
+    padding: 0 34px 0 20px;
+    font-size: 16px;
+    color: #0f0f0f;
+    font-weight: 500;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    background-color: #ffe1e1;
+}
+.form-group button {
+    position: absolute;
+    right: 50px;
+    z-index: 1;
+    top: 2px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    opacity: 1;
+    cursor: pointer;
+    outline: none;
+}
+.form-group button img{ max-width:20px;}
+.full-screen.cart {
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+.listingarea{ margin-top:115px; padding-bottom:10px;}
+.listingarea .inline-item h2{ color:#000; font-weight:600;}
+
+.listingarea .inline-item button {
+    color: rgb(0 0 0 / 58%);
+    text-transform: capitalize;
+}
+
+
+.listing_box{
+	-ms-flex-wrap: nowrap!important;
+    flex-wrap: nowrap!important;
+	display: -ms-flexbox!important;
+    display: flex!important;
+}
+
+
+.listing_box {
+    box-sizing: border-box;
+    padding: 6px;
+    box-shadow: 0 0 4px rgb(185 185 185 / 50%);
+    background-color: #fdfdfd;
+    margin-top: 10px;
+    position: relative;
+}
+.listing_box button.thumble {
+    max-width: 30%;
+    border: none;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.listing_box button.thumble img {
+    width: 100%;
+    object-fit: cover;
+    height: 80px;
+    border-radius: 10px;
+}
+.listing_box button.thumble:hover img{ opacity:0.7;}
+.listing_box .listing_textbox {
+    width: 60%;
+    box-sizing: border-box;
+    padding: 0 7px;
+}
+.listing_box .listing_textbox h3{ padding:0; margin:0;line-height: 0;}
+.listing_box .listing_textbox h3 button {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    font-size: 13px;
+    margin: 0;
+    outline: none;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    margin-bottom:4px;
+}
+.listing_box .listing_textbox h6 {
+    padding: 0 0;
+    margin: 0 0 -4px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ff0000;
+}
+.listing_box .listing_textbox p {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    font-weight: 600;
+    color: #3a3a3a;
+    text-transform: capitalize;
+}
+.listing_box .listing_textbox .retingbox {
+    -ms-flex-pack: justify!important;
+    justify-content: space-between!important;
+    display: -ms-flexbox!important;
+    display: flex!important;
+    padding: 5px 0;
+}
+.listing_box .listing_textbox .retingbox p {
+    font-size: 12px;
+    color: #666;
+    font-weight: 400;
+    height: 40px;
+    overflow: hidden;
+}
+.listing_box .add-to-cart {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #fff;
+    border: 1px solid #ff0000;
+    color: #ff0000;
+    padding: 3px 5px;
+    font-size: 11px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.listing_box .listing_textbox .retingbox span {
+    color: #272727;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+
+.listing_box .listing_textbox .retingbox span i{ margin-right:5px; color:#F90;}
+
+
+
+
+.container {
+    padding: 0 1em;
+}
+
+
+.sticky_footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #000;
+    z-index: 99;
+    padding: 5px 0;
+    box-shadow: 0 -1px 10px rgb(0 0 0 / 22%);
+}
+
+.sticky_footer p {
+	margin: 0;
+	padding: 0;
+	line-height: 0;
+}
+.sticky_footer p button {
+    background-color: transparent;
+    border: none;
+    padding: 3px 0;
+    cursor: pointer;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 500;
+	position:relative;
+    border: none;
+    outline: none;
+}
+.sticky_footer p button:active{
+    border:none;
+    box-shadow:none;
+}
+.sticky_footer p button.active i {
+    color: #ff0000;
+}
+.sticky_footer p button small {
+    position: absolute;
+    right: -7px;
+    width: 20px;
+    height: 20px;
+    background-color: #ff0000;
+    top: 0;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 13px;
+}
+.sticky_footer p button i {
+    display: block;
+    font-size: 28px;
+    color: #fff;
+}
+.sticky_footer p button img {
+    max-width: 24px;
+    margin: 0;
+    padding: 0;
+    height: 22px;
+}
+
+.sticky_footer .container{
+    display: -ms-flexbox!important;
+    display: flex!important;-ms-flex-pack: justify!important;
+    justify-content: space-between!important;
+    padding: 6px 1em;
+}
+
+.sticky_footer img{ width:100%; max-width:100%; 
+    }
+
+.listCard .price {
+    /* margin-left: 1em; */
+    margin-left: auto;
+    font-weight: 600;
+    color: #3e3f68;
+    padding: 22px 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.listCard .price .remove {
+    color: #ff0000;
+    font-size: 14px;
+    text-decoration: none;
+    float: right;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.listCard .price .number {
+    width: 65px;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 30px;
+}
+.listCard .price .number .form-control {
+    width: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 0px;
+    border: 1px solid #c7c7c7;
+    background: transparent;
+    color: #4e4e4e;
+    padding: 6px 0px;
+    margin: auto;
+    font-size: 18px;
+    height: 30px;
+}
+.listCard .price .number .btn-minus {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ff0000;
+    border: 1px solid #ff0000;
+    color: #ffffff;
+    height: 100%;
+    cursor: pointer;
+    width: 20px;
+    font-size: 12px;
+    font-weight: 900;
+    outline: none;
+}
+.listCard .price .number .btn-minus:hover{ opacity:0.7;}
+.listCard .price .number .btn-plus {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #ff0000;
+    border: 1px solid #ff0000;
+    color: #ffffff;
+    height: 100%;
+    cursor: pointer;
+    width: 20px;
+    font-size: 12px;
+    font-weight: 900;
+    outline: none;
+}
+.listCard .price .number .btn-plus:hover{ opacity:0.7;}
+.listCard .dtl .desc .itaemName {
+    font-size: 15px;
+    font-weight: 600;
+    color: #313131;
+}
+
+.loader_box{
+width: 100%;
+
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.loader_box img{
+object-fit: cover;
+}
+.empty_menu{
+width: 100%;
+padding-top: 60px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 20px;
+font-weight: 600;
+color: #c31313;
+}

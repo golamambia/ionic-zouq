@@ -1,0 +1,59 @@
+
+<ion-content>
+  <div class="page-wrap minH100">
+    <div class="container">
+
+      <!-- <div class="fullWidth">
+        <div class="top-wrapper">
+          <div class="top-content">
+            <img class="nav-left" src="assets/nav.png" alt="">
+            <img class="message-right" src="assets/profile-edit.png" alt="">
+          </div>
+        </div>
+      </div> -->
+      
+      <div class="body-part">
+        <div class="body-cont">
+          <button class="btn-back" (click)="back()"><i class="zmdi zmdi-arrow-left"></i></button>
+          <div class="logoTop">
+            <img class="img30" src="assets/logo1.png" alt="">
+          </div>
+          <!-- <div class="btnGroup">
+            <button class="btn active">Login</button>
+            <button class="btn">Sign up</button>
+          </div> -->
+          <div class="loginContainer">
+            <h1>Sign in to <br>your
+Account </h1>
+            <form class="formControl" action="">
+              <div class="userInput_box">
+                <label>email id</label>
+                <input type="text" placeholder="Email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+                <div class="icon"><img src="assets/icon1.png" alt=""></div>
+              </div>
+              <div class="userInput_box">
+                <label>Password</label>
+                <input type="password" placeholder="Password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+                <div class="icon"><img src="assets/icon2.png" alt=""></div>
+              </div>
+              <button class="forgPass" href="#">Forgot Password ?</button>
+              
+            </form>
+            <div class="btn-row">
+              <button class="btn signIn" (click)="login()">Login</button>
+            </div>
+            <p class="para">Or sign in with</p>
+            <ul class="social-row">
+              <li><button class="btn btn-google"><img src="assets/social-g.png" alt="">google</button></li>
+              <li><button class="btn btn-facebook"><img src="assets/social-f.png" alt="">facebook</button></li>
+            </ul>
+            <p class="textletter">Not yet a member, <a href="/register">Sign up</a></p>
+          </div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+    
+</ion-content>

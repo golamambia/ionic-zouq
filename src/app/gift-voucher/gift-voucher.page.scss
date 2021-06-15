@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css');
+
+html, body {
+    display: block;
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+	position:relative;
+	z-index:1;
+	background-color: #ffffff;
+
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.top-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #000;
+    position: fixed;
+    z-index: 99;
+}
+.top-nav .btn-back {
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+}
+
+.top-nav .title {
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: 0 auto;
+    text-transform: uppercase;
+    letter-spacing: normal;
+}
+.header {
+    background-color: #fe5632;
+    box-shadow: 0px 2px 5px rgb(0 0 0 / 24%);
+}
+
+
+.full-screen.cart {
+    flex-direction: column;
+}
+
+
+.justify-content-between {
+    -ms-flex-pack: justify!important;
+    justify-content: space-between!important;
+}
+.d-flex {
+    display: -ms-flexbox!important;
+    display: flex!important;
+}
+
+.container {
+    padding: 0 1em;
+}
+
+.gift_voucher_main_area{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 70px 0 0;
+    margin: 0 0 15px;
+}
+.gift_voucher_main_area .gift_voucher_main_body{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0 0;
+    margin: 0 0 0;
+}
+.gift_voucher_main_area .gift_voucher_main_body .gift_voucher_box{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0 0;
+    margin: 0 0 0;
+    box-shadow: 0 0 10px rgb(153 153 153 / 50%);
+    border-radius: 8px;
+}
+.gift_voucher_main_area .gift_voucher_main_body .gift_voucher_box h3 {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0;
+    padding: 10px 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #000;
+    position: relative;
+}
+.gift_voucher_main_area .gift_voucher_main_body .gift_voucher_box .gift_voucher{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 10px;
+}
+.gift_voucher_main_area .gift_voucher_main_body .gift_voucher_box .gift_voucher h4 {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0;
+    margin: 0 0 5px;
+    color: #494949;
+}
+.gift_voucher_main_area .gift_voucher_main_body .gift_voucher_box .gift_voucher .voucher_box {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #bdbdbd;
+}
+.gift_voucher_main_area .gift_voucher_main_body .gift_voucher_box .gift_voucher .voucher_box:last-child {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0 0px;
+    margin-bottom: 0px;
+    border-bottom: 0px;
+}
+.gift_voucher_main_area .gift_voucher_main_body .gift_voucher_box .gift_voucher .voucher_box .voucher_body_box{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0 0;
+    margin: 0 8px 0 0;
+    position: relative;
+}
+.gift_voucher_main_area .gift_voucher_main_body .gift_voucher_box .gift_voucher .voucher_box .voucher_body_box:last-child{
+    margin: 0 0 0 0;
+}
+.gift_voucher_main_area .gift_voucher_main_body .gift_voucher_box .gift_voucher .voucher_box .voucher_body_box h5{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0 0;
+    margin: 0 0 0 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    line-height: 38px;
+}
+.gift_voucher_main_area .gift_voucher_main_body .gift_voucher_box .gift_voucher .voucher_box .voucher_body_box h5 span{
+    float: right;
+}
+.gift_voucher_main_area .gift_voucher_main_body .gift_voucher_box .gift_voucher .voucher_box .voucher_body_box .form-control {
+    box-sizing: border-box;
+    height: 40px;
+    padding: 0 30px;
+    width: 120px;
+    text-align: center;
+}
+.gift_voucher_main_area .gift_voucher_main_body .gift_voucher_box .gift_voucher .voucher_box .voucher_body_box .btn {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 40px;
+    padding: 10px 10px;
+    line-height: 17px;
+    background: #ff0000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #ff0000;
+    cursor: pointer;
+    outline: none;
+}
+.gift_voucher_main_area .gift_voucher_main_body .gift_voucher_box .gift_voucher .voucher_box .voucher_body_box .btn.btn-minus{
+    left: 0;
+}
+.gift_voucher_main_area .gift_voucher_main_body .gift_voucher_box .gift_voucher .voucher_box .voucher_body_box .btn.btn-plus{
+    right: 0;
+}
+
+.checkout_area{
+   box-sizing: border-box;
+    padding: 15px 0px;
+    background: #000;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #000;
+    z-index: 99;
+    box-shadow: 0 -1px 10px rgb(0 0 0 / 22%);
+}
+.checkout_area h5 {
+    margin: 0 0;
+    padding: 0 0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.btn-wrap{
+        display: flex;
+    flex-direction: column;
+    margin-bottom: 6%;
+    padding: 0 1em;
+}
+
+.btn-wrap button{
+     background-color: #ff0000;
+    border: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    cursor: pointer;
+    padding: 17px;
+    outline: none;
+    font-family: "Poppins", sans-serif;   
+}

@@ -1,0 +1,68 @@
+
+<ion-content>
+
+   
+    
+  <div class="header">
+    <div class="top-nav">
+      <button class="btn-back" (click)="back()">
+        <i class="zmdi zmdi-arrow-left"></i>
+      </button>
+      <div class="title">Gift Voucher</div>
+    </div>
+  </div>
+      
+  <div class="gift_voucher_main_area">
+    <div class="container">
+      <div class="gift_voucher_main_body">
+        <div class="gift_voucher_box">
+          <h3>Gift Voucher</h3>
+          <div class="gift_voucher">
+            <h4>Vouchers :</h4>
+
+            <div class="voucher_box" *ngFor="let voucherlist of voucher_list; let i=index">
+              <div class="d-flex justify-content-between">
+                <div class="voucher_body_box">
+                  <h5>€{{voucherlist.price}}<span>X</span></h5>
+                </div>
+                <div class="voucher_body_box">
+                  <button class="btn btn-minus" *ngIf="voucherlist.qty>0" (click)="decrementQty(i,voucherlist.id,voucherlist)">-</button>
+                   <button class="btn btn-minus" *ngIf="voucherlist.qty==0">-</button>
+                  <button class="btn btn-plus" (click)="incrementQty(i,voucherlist.id,voucherlist)">+</button>
+                  <input type="text" class="form-control" value="{{voucherlist.qty}}" readonly>
+                </div>
+                <div class="voucher_body_box">
+                  <h5>=<span>€{{voucherlist.qty*voucherlist.price}}</span></h5>
+                </div>
+              </div>
+            </div>
+            
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="bottom-actionWrapper" *ngIf="btn_check>0">
+        <div class="btn-wrap" >
+          <button *ngIf="userDetails" class="btn-default" routerLink="/voucher-pay">Proceed to checkout</button>
+          <button *ngIf="!userDetails" class="btn-default" routerLink="/login">Proceed to checkout</button>
+        </div>
+        
+      </div>
+
+
+
+  <div class="checkout_area">
+    <div class="container">
+      <div class="d-flex justify-content-between">
+        <h5><i class="zmdi zmdi-shopping-cart"></i> Checkout (<small [innerHTML]="voucherTcount">0</small>)</h5>
+        <h5 [innerHTML]="voucherTprice">€0</h5>
+      </div>
+    </div>
+  </div>
+
+    
+  
+</ion-content>
